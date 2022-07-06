@@ -10,14 +10,90 @@
     </head>
 
     <body>
+        <link rel="stylesheet" href="https://fonts.googleleapis.com/css?family=Lobster" type="text/css">
+        <style>
+            p {
+                color: goldenrod;
+            }
+            
+            main {
+                color: black;
+            }
+
+            .pink-text {
+                color: hotpink;
+                font-size: 30px;    /*This will increase the font size of the #about link below as it is in the "pink-text" class*/
+            }
+            
+            p {
+                font-size: 20px;    /*Here the all the texts in <p></p> will be resized into 20px*/
+                font-family: monospace;     /*Here all the font style of the texts in <p></p> will change into the given style*/
+            }
+
+            h1 {
+                font-family: Lobster, monospace;    /*Here, LOBSTER is a font style that has been extracted from the above <link>*/ /*Here, LOBSTER doesn't work so I've used MONOSPACE as the backup font*/
+                background-color: black;    /*This sets the background color for the h2 header*/
+            }
+
+            .larger-image{
+                width: 600px;   /*Here, I'be changed the width of the image which is in the "larger-image" class as CSS can be used to resize images*/
+                border-color: greenyellow;
+                border-width: 10px;
+                border-style: outset;   /*This is decides the style of border in CSS*/
+                border-radius: 50%; /*This will make the image circular if we use "%"*/
+                /*border-radius: 20px;*/    /*And this will make the borders of the image curvy if we use "px"*/
+            }
+
+            .silver-background {
+                background-color: silver;
+            }
+
+            #my-form {
+                background-color: blueviolet;
+            }
+
+        .padding-border {
+                background-color: darkgoldenrod;
+                border-width: 20px;
+                border-style: ridge;
+                border-color: blue;
+                padding: 10px;  /*Here, the "padding" attribute increases the color background of the heading OUR MENu*/
+                margin: 10px;   /*This decreases/increases the space between the blue and plain margin of the OUR MENU*/
+            }
+
+            #centre {
+                text-align: center; /*This aligns the given text in the middle of the webpage*/
+                background-color: darksalmon;
+                border-style: solid;
+                border-width: 10px;
+                border-color: maroon;
+            }
+
+            #full-box {
+                background-color: darkorange;
+                margin: 100px;  /*Here we can give a negative value to the "margin" which will result in more decrease of the marginal space*/
+                border-style: solid;
+                border-width: 50px;
+                border-color: darkorange;
+                /*padding-left: 150px;
+                padding-top: 150px;
+                padding-right: 150px;
+                padding-bottom: 150px;*/        /*This is PADDING from different sides*/
+                margin-top: 10px;
+                margin-right: 20px;
+                margin-bottom: 30px;
+                margin-left: 40px;  /*This is specifying margin from different sides*/
+                padding: 40px 20px 20px 400px;  /*This is CLOCKWISE Padding (top, right, bottom, left)*/
+            }
+        </style>        <!--This is Block CSS-->
         <header>
-            <h1>
+            <h1 style="color: red">     <!--This is Inline CSS-->
                 Welcome to The Little Taco Shop!
             </h1>
             <nav>
                 <ul>
                     <li>
-                        <a href="#about">About <abbr title="The Little Taco Shop">LTC</abbr></a>
+                        <a href="#about" class="pink-text">About <abbr title="The Little Taco Shop">LTC</abbr></a>    <!--Here I have used Class CSS to color an element-->
                     </li>
                     <li>
                         <a href="#menu">Our Menu</a>
@@ -32,7 +108,7 @@
             </nav>
 
             <figure>
-                <img src="img/tacos_and_drink_400x267.png" alt="Tacos and a Drink" title="We love Tacos!" width="400" height="267">
+                <img class="larger-image" src="img/tacos_and_drink_400x267.png" alt="Tacos and a Drink" title="We love Tacos!" width="400" height="267">    <!--"larger-image" is a CSS class-->
                 <figcaption>
                     Tacos and a Drink
                 </figcaption>
@@ -72,8 +148,8 @@
             <hr>
 
             <article id="menu">
-                <h2>Our Menu</h2>
-                <table>
+                <h2 class="padding-border">Our Menu</h2>
+                <table class="silver-background">   <!--The class "silver-background" will take the input of CSS in the above CSS block and apply the silver background to the table-->
                     <caption>Our Tacos</caption>
                     <thead>
                         <tr>
@@ -126,6 +202,10 @@
                 <p>
                     <a href="#">Back to Top</a>
                 </p>
+            </article>
+            <article id="full-box">
+                <h3 id="centre">Padding</h3>
+                <h3 id="centre">Margin</h3>
             </article>
         </main>
 

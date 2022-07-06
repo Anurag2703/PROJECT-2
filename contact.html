@@ -10,6 +10,11 @@
     </head>
 
     <body>
+        <style>
+            #my-form {
+                background-color: blueviolet;   /*Here, the id "my-form" gives the color from the CSS block to the form*/
+            }
+        </style>
         <header>
             <h1>
                 Contact Us!
@@ -46,7 +51,7 @@
             <section>
                 <h2>Our Contact Form</h2>
 
-                <form action="https://httpbin.org/get" method="get">
+                <form id="my-form" action="https://httpbin.org/get" method="get">
                     <fieldset>
                         <legend>Send us a Message</legend>
                         <p>
