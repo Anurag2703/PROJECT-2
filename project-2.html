@@ -10,7 +10,7 @@
     </head>
 
     <body>
-        <link rel="stylesheet" href="https://fonts.googleleapis.com/css?family=Lobster" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleleapis.com/css?family=Lobster" type="text/css">                
         <style>
             p {
                 color: goldenrod;
@@ -210,6 +210,31 @@
             <article id="full-box">
                 <h3 id="centre">Padding</h3>
                 <h3 id="centre">Margin</h3>
+            </article>
+
+            <article>
+                <h2>Choose Me</h2>
+
+                <form action="https://httpbin.org/get">
+                    <fieldset>
+                        <legend>Which one of me you want to eat ?</legend>
+                        <p>
+                            <input type="radio" name="food" id="crunchy" value="crunchy">
+                            <label for="crunchy">Crunchy</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="food" id="soft" value="soft">
+                            <label for="soft">Soft</label>
+                        </p>
+                        <p>
+                            <input type="radio" name="food" id="both" value="both">
+                            <label for="both">Both</label>
+                        </p>
+                    </fieldset>
+                    <br>
+                    <button type="submit">Submit</button>
+                    <button type="reset">Reset</button>
+                </form>
             </article>
         </main>
 
