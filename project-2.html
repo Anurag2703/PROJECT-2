@@ -11,9 +11,10 @@
 
     <body>
         <link rel="stylesheet" href="https://fonts.googleleapis.com/css?family=Lobster" type="text/css">                
-        <style>
+        <style> /*Here, the order of styles declared decides which style overrides whom*/
             body {
-                background-color: rgb(234, 0, 255);
+                background-color: rgb(94, 153, 208);
+                color: 000000;  /*This is the hex code (number of six digits which specifies the color)*/
             }
 
             [type='radio'] {    /*Here in 'type', we can specify anything like checkbox or radio or whatever we want style*/
@@ -28,10 +29,18 @@
                 color: black;
             }
 
+            #maroon-text {
+                color: maroon;  /*3. This id attribute is over-riding the class red-text even though it is declared before the class*/
+            }
+
             .pink-text {
                 color: hotpink;
-                font-size: 30px;    /*This will increase the font size of the #about link below as it is in the "pink-text" class*/
+                font-size: 30px;    /*1. This will increase the font size of the #about link below as it is in the "pink-text" class*/
             }
+
+            .red-text {
+                color: crimson !important; /*2. This class is over-riding the pink-text class as is is declared after the pink-text*/
+            }   /*The !important specifies that the mentioned class is most important than an id too*/
             
             p {
                 font-size: 20px;    /*Here the all the texts in <p></p> will be resized into 20px*/
@@ -104,8 +113,8 @@
             </h1>
             <nav>
                 <ul>
-                    <li>
-                        <a href="#about" class="pink-text">About <abbr title="The Little Taco Shop">LTC</abbr></a>    <!--Here I have used Class CSS to color an element-->
+                    <li>    <!--Here,the-->
+                        <a href="#about" class="pink-text red-text" id="maroon-text" style="color: black;">About <abbr title="The Little Taco Shop">LTC</abbr></a>    <!--Here I have used Class CSS to color an element-->
                     </li>
                     <li>
                         <a href="#menu">Our Menu</a>
