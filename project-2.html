@@ -145,8 +145,12 @@
                 display: grid;
                 background: lightslategray;
 
+                grid-template-columns: auto-fill, minmax(50px, 1fr);   /*Here, 50px is the minimum size and 1fr is the maximum size*/
+
+                /*display: flex;*/      /*This fixes the color numbers in a fix position*/
+
                 /*Adding columns to the grid through "grid-template-column" attribute*/
-                grid-template-columns: 1fr 100px 2fr;   /*Here the middle '2' and '5' take only 100px no matter how much the window size changes but the first and third column will keep changing no matter what because of the "fr" units.*/
+                /*grid-template-columns: 1fr 100px 2fr;*/   /*Here the middle '2' and '5' take only 100px no matter how much the window size changes but the first and third column will keep changing no matter what because of the "fr" units.*/      /**/
                 /*Adding columns to the grid through "grid-template-column" attribute*/
 
                 /*Adding columns to the grid through "grid-template-column" attribute*/
@@ -177,6 +181,8 @@
                 "header header header"
                 "advert content content"
                 "footer footer footer";
+
+                /*display: flex;*/      /*sets the flexible length on flexible items*/
             }
             /*This is styling my first CSS Grid*/
 
